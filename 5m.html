@@ -1,207 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="متجر FiveM الرسمي - أفضل السكربتات والمركبات لسيرفرات GTA">
-    <meta name="keywords" content="FiveM, GTA, سكربتات, مركبات, سيرفرات">
-    <title>متجر FiveM - أفضل منتجات سيرفرات الجي تي أي</title>
-    <link rel="stylesheet" href="5m.css">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <img src="images/logo.png" alt="FiveM Logo" width="40" height="40">
-                <h1>متجر FiveM</h1>
-            </div>
-            
-            <nav>
-                <ul>
-                    <li><a href="#home">الرئيسية</a></li>
-                    <li><a href="#products">المنتجات</a></li>
-                    <li><a href="#features">المميزات</a></li>
-                    <li><a href="#testimonials">آراء العملاء</a></li>
-                    <li><a href="#contact">اتصل بنا</a></li>
-                </ul>
-            </nav>
-            
-            <div class="header-actions">
-                <button class="btn btn-primary" id="login-btn">تسجيل الدخول</button>
-                <button class="btn btn-outline" id="register-btn">إنشاء حساب</button>
-                <button class="cart-btn" id="cart-btn">
-                    🛒
-                    <span class="cart-count" id="cart-count">0</span>
-                </button>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-content">
-            <h2>أفضل منتجات FiveM لسيرفرات الجي تي أي</h2>
-            <p>استمتع بأفضل السكربتات والمركبات والأسلحة والخريصات المصممة خصيصاً لسيرفرات FiveM بجودة عالية وأداء ممتاز</p>
-            <button class="btn btn-primary btn-lg" id="cta-button">تصفح المنتجات</button>
-        </div>
-    </section>
-    
-    <!-- Products Section -->
-    <section class="section" id="products">
-        <div class="container">
-            <h2 class="section-title">منتجاتنا</h2>
-            
-            <div class="products-grid">
-                <!-- سيتم ملئها بواسطة الجافاسكريبت -->
-            </div>
-        </div>
-    </section>
-    
-    <!-- Features Section -->
-    <section class="section features" id="features">
-        <div class="container">
-            <h2 class="section-title">لماذا تختارنا؟</h2>
-            
-            <div class="features-grid">
-                <!-- سيتم ملئها بواسطة الجافاسكريبت -->
-            </div>
-        </div>
-    </section>
-    
-    <!-- Testimonials Section -->
-    <section class="section" id="testimonials">
-        <div class="container">
-            <h2 class="section-title">آراء عملائنا</h2>
-            
-            <div class="testimonials-grid">
-                <!-- سيتم ملئها بواسطة الجافاسكريبت -->
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-grid">
-                <!-- سيتم ملئها بواسطة الجافاسكريبت -->
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; <span id="current-year">2023</span> متجر FiveM. جميع الحقوق محفوظة.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Modals -->
-    <div class="modal" id="login-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-header">
-                <h2 class="modal-title">تسجيل الدخول</h2>
-            </div>
-            <div class="modal-body">
-                <form id="login-form">
-                    <div class="form-group">
-                        <label for="login-email" class="form-label">البريد الإلكتروني</label>
-                        <input type="email" id="login-email" class="form-control" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="login-password" class="form-label">كلمة المرور</label>
-                        <input type="password" id="login-password" class="form-control" required>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">تسجيل الدخول</button>
-                    
-                    <div class="form-footer">
-                        ليس لديك حساب؟ <a href="#" id="show-register">إنشاء حساب</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    
-    <div class="modal" id="register-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-header">
-                <h2 class="modal-title">إنشاء حساب جديد</h2>
-            </div>
-            <div class="modal-body">
-                <form id="register-form">
-                    <div class="form-group">
-                        <label for="register-name" class="form-label">الاسم الكامل</label>
-                        <input type="text" id="register-name" class="form-control" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="register-email" class="form-label">البريد الإلكتروني</label>
-                        <input type="email" id="register-email" class="form-control" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="register-password" class="form-label">كلمة المرور</label>
-                        <input type="password" id="register-password" class="form-control" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="register-confirm-password" class="form-label">تأكيد كلمة المرور</label>
-                        <input type="password" id="register-confirm-password" class="form-control" required>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">إنشاء حساب</button>
-                    
-                    <div class="form-footer">
-                        لديك حساب بالفعل؟ <a href="#" id="show-login">تسجيل الدخول</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    
-    <div class="modal" id="cart-modal">
-        <div class="modal-content cart-modal">
-            <span class="close-modal">&times;</span>
-            <div class="modal-header">
-                <h2 class="modal-title">سلة التسوق</h2>
-            </div>
-            <div class="modal-body">
-                <div class="cart-items" id="cart-items">
-                    <p id="empty-cart-message">سلة التسوق فارغة</p>
-                </div>
-            </div>
-            <div class="cart-summary">
-                <div class="cart-total">
-                    <span>المجموع:</span>
-                    <span id="cart-total-price">$0.00</span>
-                </div>
-                <div class="cart-actions">
-                    <button class="btn btn-outline continue-shopping" id="continue-shopping">مواصلة التسوق</button>
-                    <button class="btn btn-primary checkout" id="checkout">إتمام الشراء</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="modal" id="product-detail-modal">
-        <div class="modal-content product-detail-modal">
-            <span class="close-modal">&times;</span>
-            <div class="modal-body">
-                <div class="product-detail" id="product-detail-content">
-                    <!-- سيتم ملئها بواسطة الجافاسكريبت -->
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Notification -->
-    <div class="notification" id="notification">
-        <span class="notification-icon">✓</span>
-        <span class="notification-message" id="notification-message"></span>
-        <span class="notification-close">&times;</span>
-    </div>
-    
-    <script src="5m.js"></script>
-</body>
-</html>
